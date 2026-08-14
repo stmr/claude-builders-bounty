@@ -70,3 +70,17 @@ Real-PR evidence is in examples/mergeos-224.md and examples/validationboof-7.md.
 
 The agent never asks Claude Code to edit files or run commands; it sends only the fetched
 patch and treats missing structured sections as low-confidence output.
+
+## CHANGELOG Generator (#1)
+
+A zero-dependency CLI and Claude Code skill that parses git history and conventional commits into a structured Keep a Changelog Markdown document.
+
+### Setup & Usage (3 steps)
+
+1. Clone repository and ensure Python 3 is installed.
+2. Run `./changelog.sh --version 1.0.0` or `python3 bin/generate-changelog -o CHANGELOG.md`.
+3. Include in Claude Code workflows via `skills/generate-changelog/SKILL.md`.
+
+Run tests with `python3 -m unittest discover -s tests`.
+
+Sample output: `examples/changelog-sample.md`.
